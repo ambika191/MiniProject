@@ -3,28 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
+  <title>Snake Game</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="login-container">
-    <form class="login-form">
-      <h2>Login</h2>
-      
-      <div class="input-group">
-        <label for="username">Satyam</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required>
-      </div>
-      
-      <div class="input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      </div>
-      
-      <button type="submit" class="login-btn">Login</button>
-      
-      <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
-    </form>
+  <div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+    <div id="score">Score: 0</div>
   </div>
+
+  <!-- Add Sound Effects -->
+  <audio id="eatSound" src="eat-sound.mp3"></audio>
+  <audio id="gameOverSound" src="game-over-sound.mp3"></audio>
+
+  <script src="script.js"></script>
 </body>
 </html>
