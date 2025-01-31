@@ -14,8 +14,8 @@ let food = { x: 0, y: 0 };
 let direction = "RIGHT";
 let score = 0;
 let gameInterval;
-const eatSound = document.getElementById("eatSound");
-const gameOverSound = document.getElementById("gameOverSound");
+// const eatSound = document.getElementById("eatSound");
+// const gameOverSound = document.getElementById("gameOverSound");
 
 function resizeCanvas() {
   // Resize canvas to full screen
@@ -67,7 +67,7 @@ function updateSnake() {
   if (head.x === food.x && head.y === food.y) {
     score += 10;
     document.getElementById("score").innerText = `Score: ${score}`;
-    eatSound.play(); // Play sound when food is eaten
+    // eatSound.play();
     generateFood();
   } else {
     snake.pop();
@@ -118,7 +118,7 @@ function checkCollisions() {
 
 function gameOver() {
   clearInterval(gameInterval);
-  gameOverSound.play(); // Play sound when the game ends
+  // gameOverSound.play();
   alert("Game Over! Final Score: " + score);
   document.location.reload();
 }
